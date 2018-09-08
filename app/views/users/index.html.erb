@@ -2,4 +2,15 @@
 
 <%= button_to 'Log Out', destroy_profile_session_path, method: :delete %>
 
+<h1>Click a User To View Content</h1>
+<%= link_to 'Create a new Post', new_user_path %>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= link_to user.email, user %></li>
+  <% end %>
+</ul>
+
+
+
+
 

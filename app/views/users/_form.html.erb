@@ -1,7 +1,9 @@
-<h1><%= @user.id ? 'Edit User' : 'Create User' %></h1>
+<h1><%= @user.id ? 'Edit Comment' : 'Create Comment' %></h1>
 <hr />
 <%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.label :last_name %> 
+<br />
+  <%= f.text_field :email, required: true, autofocus: true %>
+  <br />
   <%= f.submit %>
 <% end %>

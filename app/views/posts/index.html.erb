@@ -1,5 +1,8 @@
 <h1>Comments</h1>
 
-
+<h1>Click a User To View Content</h1>
+<%= link_to 'Create a new Post', new_user_path %>
 <%= button_to 'Log Out', destroy_profile_session_path, method: :delete %>
 <h2>Welcome <%= current_profile.first_name %> </h2>
+
+
