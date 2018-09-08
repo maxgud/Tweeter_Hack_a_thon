@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_profile!
   before_action :set_user, only: [:show, :update, :edit, :destroy]
 
   def index
@@ -9,9 +10,12 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
+    render partial: "form"
   end
 
   def edit
+    render partial: "form"
   end
 
   def create
